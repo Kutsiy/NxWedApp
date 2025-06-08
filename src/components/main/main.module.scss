@@ -1,0 +1,13 @@
+.main {
+  min-width: 300px;
+  width: 1300px;
+  min-height: 100px;
+  height: 675px;
+  background-color: var(--glass-background);
+  border: var(--glass-border);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

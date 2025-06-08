@@ -1,16 +1,19 @@
 :root {
   --background: #ffffff;
   --text: #171717;
-  --font-size: 25px;
+  --font-size: 1.05rem;
+  --glass-background: rgba(255, 255, 255, 0.05);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: linear-gradient(
-      150deg,
-      rgba(1, 7, 20, 1) 35%,
-      rgba(0, 23, 80, 0.6) 100%
+      160deg,
+      rgba(1, 7, 20, 1) 40%,
+      rgba(0, 12, 38) 70%,
+      rgba(0, 23, 80, 0.99) 90%
     );
-    --text: #ededed;
+    --text: #bcbcbc;
   }
 }
