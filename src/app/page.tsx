@@ -1,8 +1,34 @@
 import { NextPage } from "next";
-import "./page.module.scss";
+import styles from "./page.module.scss";
+import { FaAngleRight } from "react-icons/fa";
 
-const Hello: NextPage = ({}) => {
-  return <div></div>;
+const HelloPage: NextPage = ({}) => {
+  return (
+    <div className={styles.hello__wrapper}>
+      <div className={styles.hello__container}>
+        <div className={styles.hello__info}>
+          <div className={styles.hello__title}>
+            <div className={styles.hello__greetings}>Hi all. I am</div>
+            <div className={styles.hello__name}>Aaaa Aaaaa</div>
+            <div className={styles.hello__front}>
+              <FaAngleRight />
+              Front-end developer
+            </div>
+          </div>
+
+          <div className={styles.hello__github}>
+            <div className={styles.hello__find_profile}>
+              {"// find my profile on Github:"}
+            </div>
+            <div className={styles.hello__github_link}>
+              const githubLink = “https://github.com/example/url”
+            </div>
+          </div>
+        </div>
+        <div className={styles.hello__game}></div>
+      </div>
+    </div>
+  );
 };
 
-export default Hello;
+export default HelloPage;

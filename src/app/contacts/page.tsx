@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 
-const Contacts: NextPage = ({}) => {
+const ContactsPage: NextPage = ({}) => {
   return <div>Contact</div>;
 };
 
-export default Contacts;
+export default ContactsPage;

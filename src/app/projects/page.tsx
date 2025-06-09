@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 
-const Projects: NextPage = ({}) => {
+const ProjectsPage: NextPage = ({}) => {
   return <div>Projects</div>;
 };
 
-export default Projects;
+export default ProjectsPage;

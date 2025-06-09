@@ -1,6 +1,7 @@
 "use client";
 import styles from "./footer.module.scss";
-import { FaXTwitter, FaTelegram } from "react-icons/fa6";
+import { FaTelegram } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = ({}) => {
   return (
@@ -9,7 +10,7 @@ const Footer = ({}) => {
       <div className={styles.footer__nav_bar}>
         <nav className={styles.footer__nav}>
           <div className={styles.footer__nav_btn}>
-            <FaXTwitter />
+            <FaGithub />
           </div>
           <div className={styles.footer__nav_btn}>
             <FaTelegram />
