@@ -34,14 +34,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  }
-
-  &__nav_btn:nth-child(2) {
-    border-left: var(--glass-border);
-    border-right: var(--glass-border);
-  }
-
-  &__nav_btn:nth-child(3) {
     border-right: var(--glass-border);
   }
 
@@ -52,6 +44,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
   }
 }
