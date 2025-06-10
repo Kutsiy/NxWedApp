@@ -7,12 +7,13 @@
   display: flex;
 
   &__title {
-    min-width: 150px;
+    min-width: var(--left-margin);
     height: 100%;
     border-right: var(--glass-border);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.2rem;
   }
 
   &__nav_bar {
@@ -35,6 +36,7 @@
     justify-content: center;
     cursor: pointer;
     border-right: var(--glass-border);
+    font-size: 1.2rem;
   }
 
   &__gap {

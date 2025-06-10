@@ -8,7 +8,7 @@ const Header = ({}) => {
   return (
     <header className={styles.header}>
       <Link href="/">
-        <div className={styles.header__title}>NX</div>
+        <div className={styles.header__title}>egor_kutsiy</div>
       </Link>
       <div className={styles.header__nav_bar}>
         <nav className={styles.header__nav}>

@@ -9,7 +9,7 @@ const HelloPage: NextPage = ({}) => {
         <div className={styles.hello__info}>
           <div className={styles.hello__title}>
             <div className={styles.hello__greetings}>Hi all. I am</div>
-            <div className={styles.hello__name}>Aaaa Aaaaa</div>
+            <div className={styles.hello__name}>Egor Kutsiy</div>
             <div className={styles.hello__front}>
               <FaAngleRight />
               Front-end developer
@@ -21,7 +21,11 @@ const HelloPage: NextPage = ({}) => {
               {"// find my profile on Github:"}
             </div>
             <div className={styles.hello__github_link}>
-              const githubLink = “https://github.com/example/url”
+              <span className={styles.const}>const</span>{" "}
+              <span className={styles.var_name}>githubLink</span> = {""}
+              <a href="https://github.com/Kutsiy" className={styles.link}>
+                “https://github.com/Kutsiy”
+              </a>
             </div>
           </div>
         </div>

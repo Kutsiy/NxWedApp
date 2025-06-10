@@ -7,7 +7,7 @@
   display: flex;
 
   &__title {
-    width: 150px;
+    width: var(--left-margin);
     height: 100%;
     border-right: var(--glass-border);
     display: flex;

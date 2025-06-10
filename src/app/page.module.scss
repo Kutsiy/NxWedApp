@@ -2,9 +2,6 @@
   &__wrapper {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   &__container {
@@ -12,13 +9,14 @@
     display: flex;
     align-items: center;
     gap: 146px;
+    margin-left: var(--left-margin);
   }
 
   &__info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 250px;
+    height: 230px;
   }
 
   &__title {
@@ -47,17 +45,76 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    font-size: 1.1rem;
   }
 
   &__find_profile {
   }
 
   &__github_link {
+    color: white;
   }
 
   &__game {
     width: 470px;
     height: 420px;
-    background-color: greenyellow;
+    background: linear-gradient(
+      140deg,
+      rgba(23, 85, 83, 0.9) 0%,
+      rgba(67, 217, 173, 0.5) 10%,
+      rgba(67, 217, 173, 0.15) 70%,
+      rgba(67, 217, 173, 0.13) 80%,
+      rgba(67, 217, 173, 0.09) 100%
+    );
+    border-radius: 15px;
+    border: 2px solid rgba(49, 65, 88, 1);
+    box-shadow: 0px -2px 2px rgb(88, 97, 111);
+    position: relative;
+    backdrop-filter: blur(10px);
   }
+
+  &__game::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(
+      circle at center,
+      rgb(0, 255, 229) 0%,
+      transparent
+    );
+    border-radius: 100%;
+    left: -100px;
+    top: -50px;
+    filter: blur(60px);
+  }
+
+  &__game::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(
+      circle at center,
+      rgba(97, 95, 255, 1) 0%,
+      transparent
+    );
+    border-radius: 100%;
+    right: -100px;
+    bottom: -50px;
+    filter: blur(70px);
+  }
+}
+
+.const {
+  color: #615fff;
+}
+
+.var_name {
+  color: #00d5be;
+}
+
+.link {
+  color: #ffa1ad;
+  text-decoration: underline;
 }
