@@ -71,6 +71,7 @@
     box-shadow: 0px -2px 2px rgb(88, 97, 111);
     position: relative;
     backdrop-filter: blur(10px);
+    z-index: 2;
   }
 
   &__game::before {
@@ -87,6 +88,7 @@
     left: -100px;
     top: -50px;
     filter: blur(60px);
+    z-index: 1;
   }
 
   &__game::after {
@@ -103,6 +105,7 @@
     right: -100px;
     bottom: -50px;
     filter: blur(70px);
+    z-index: 1;
   }
 }
 
