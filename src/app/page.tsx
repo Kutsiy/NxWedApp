@@ -29,7 +29,24 @@ const HelloPage: NextPage = ({}) => {
             </div>
           </div>
         </div>
-        <div className={styles.hello__game}></div>
+        <div className={styles.hello__game}>
+          <div className={styles.hello__game_glow_1}></div>
+          <div className={styles.hello__game_glow_2}></div>
+          <div className={styles.hello__game_glow_3}></div>
+
+          <div
+            className={`${styles.hello__game_ellipse} ${styles.hello__game_ellipse_1}`}
+          ></div>
+          <div
+            className={`${styles.hello__game_ellipse} ${styles.hello__game_ellipse_2}`}
+          ></div>
+          <div
+            className={`${styles.hello__game_ellipse} ${styles.hello__game_ellipse_3}`}
+          ></div>
+          <div
+            className={`${styles.hello__game_ellipse} ${styles.hello__game_ellipse_4}`}
+          ></div>
+        </div>
       </div>
     </div>
   );

@@ -60,52 +60,76 @@
     height: 420px;
     background: linear-gradient(
       140deg,
-      rgba(23, 85, 83, 0.9) 0%,
+      rgba(67, 217, 173, 0.5) 0%,
       rgba(67, 217, 173, 0.5) 10%,
-      rgba(67, 217, 173, 0.15) 70%,
-      rgba(67, 217, 173, 0.13) 80%,
+      rgba(67, 217, 173, 0.2) 60%,
+      rgba(67, 217, 173, 0.1) 80%,
       rgba(67, 217, 173, 0.09) 100%
     );
     border-radius: 15px;
     border: 2px solid rgba(49, 65, 88, 1);
-    box-shadow: 0px -2px 2px rgb(88, 97, 111);
+    border-top: none;
+    box-shadow: 0px -2px 0px rgb(88, 97, 111);
     position: relative;
-    backdrop-filter: blur(10px);
-    z-index: 2;
-  }
-
-  &__game::before {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(
-      circle at center,
-      rgb(0, 255, 229) 0%,
-      transparent
-    );
-    border-radius: 100%;
-    left: -100px;
-    top: -50px;
-    filter: blur(60px);
     z-index: 1;
-  }
 
-  &__game::after {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(
-      circle at center,
-      rgba(97, 95, 255, 1) 0%,
-      transparent
-    );
-    border-radius: 100%;
-    right: -100px;
-    bottom: -50px;
-    filter: blur(70px);
-    z-index: 1;
+    &_glow_1 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50px;
+      left: -70px;
+      top: -40px;
+      background-color: rgb(0, 255, 229);
+      filter: blur(60px);
+      opacity: 0.3;
+      z-index: 1;
+    }
+    &_glow_2 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 25px;
+      right: 40px;
+      bottom: -50px;
+      filter: blur(60px);
+      background-color: rgba(97, 95, 255, 1);
+      opacity: 0.3;
+      z-index: 1;
+    }
+
+    &_glow_3 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 25px;
+      right: -100px;
+      bottom: 80px;
+      filter: blur(60px);
+      background-color: rgba(97, 95, 255, 1);
+      opacity: 0.3;
+      z-index: 1;
+    }
+
+    &_ellipse {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border-radius: 100%;
+    }
+
+    &_ellipse_1 {
+      background: radial-gradient(circle, #196c6a 100%, #114b4a 100%);
+    }
+    &_ellipse_2 {
+      background: radial-gradient(circle, #164c51 100%, #0d3a40 100%);
+    }
+    &_ellipse_3 {
+      background: radial-gradient(circle, #217d7a 100%, #114b4a 100%);
+    }
+    &_ellipse_ {
+      background: radial-gradient(circle, #234b7c 100%, #122e4f 100%);
+    }
   }
 }
 
