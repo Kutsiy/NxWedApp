@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import styles from "./page.module.scss";
 import { FaAngleRight } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
 
 const HelloPage: NextPage = ({}) => {
   return (
@@ -36,16 +37,24 @@ const HelloPage: NextPage = ({}) => {
 
           <div
             className={`${styles.hello__game_ellipse} ${styles.hello__game_ellipse_1}`}
-          ></div>
+          >
+            <RxCross2 />
+          </div>
           <div
             className={`${styles.hello__game_ellipse} ${styles.hello__game_ellipse_2}`}
-          ></div>
+          >
+            <RxCross2 />
+          </div>
           <div
             className={`${styles.hello__game_ellipse} ${styles.hello__game_ellipse_3}`}
-          ></div>
+          >
+            <RxCross2 />
+          </div>
           <div
             className={`${styles.hello__game_ellipse} ${styles.hello__game_ellipse_4}`}
-          ></div>
+          >
+            <RxCross2 />
+          </div>
         </div>
       </div>
     </div>
