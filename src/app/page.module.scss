@@ -74,6 +74,10 @@
     position: relative;
     z-index: 1;
 
+    @media (max-width: 1200px) {
+      display: none;
+    }
+
     &_glow_1 {
       position: absolute;
       width: 200px;
