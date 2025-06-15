@@ -1,3 +1,4 @@
+import { devtools } from "zustand/middleware";
 import { createStore } from "zustand/vanilla";
 
 export type HeaderState = {
@@ -18,8 +19,10 @@ export const defaultHeaderStore: HeaderState = {
 export const createHeaderStore = (
   initState: HeaderState = defaultHeaderStore
 ) =>
-  createStore<HeaderStore>()((set) => ({
-    ...initState,
-    closeMenu: () => set(() => ({ isOpen: false })),
-    openMenu: () => set(() => ({ isOpen: true })),
-  }));
+  createStore<HeaderStore>()(
+    devtools((set) => ({
+      ...initState,
+      closeMenu: () => set(() => ({ isOpen: false })),
+      openMenu: () => set(() => ({ isOpen: true })),
+    }))
+  );

@@ -5,6 +5,7 @@ import "./styles/variables.scss";
 import Main from "@/components/main/main";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import { HeaderStoreProvider } from "../stores/header/header-store-provider";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -35,7 +36,9 @@ export default function RootLayout({
     <html lang="en" className={`dark ${firaCode.variable}`}>
       <body className={`${firaCode.variable}`}>
         <Main>
-          <Header />
+          <HeaderStoreProvider>
+            <Header />
+          </HeaderStoreProvider>
           <main>{children}</main>
           <Footer />
         </Main>
