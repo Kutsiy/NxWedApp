@@ -10,4 +10,10 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1475px) {
+    & {
+      margin: 5px 15px;
+    }
+  }
 }

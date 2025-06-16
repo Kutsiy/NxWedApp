@@ -1,3 +1,4 @@
+"use client";
 import { NextPage } from "next";
 import styles from "./page.module.scss";
 import { FaAngleRight } from "react-icons/fa";

@@ -74,7 +74,7 @@
     position: relative;
     z-index: 1;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1300px) {
       display: none;
     }
 
@@ -162,6 +162,22 @@
         right: 10px;
         color: rgb(13, 29, 49);
       }
+    }
+  }
+
+  @media (max-width: 750px) {
+    &__container {
+      margin-left: 24px;
+    }
+
+    &__name {
+      width: 100px;
+    }
+
+    &__github_link {
+      width: 250px;
+      word-break: break-all;
+      overflow-wrap: anywhere;
     }
   }
 }

@@ -47,4 +47,20 @@
     align-items: center;
     justify-content: center;
   }
+
+  @media (max-width: 750px) {
+    &__title {
+      width: 150px;
+    }
+    &__nav_bar {
+      display: block;
+    }
+    &__nav_btn {
+      padding: 0;
+      flex: 1;
+    }
+    &__gap {
+      display: none;
+    }
+  }
 }

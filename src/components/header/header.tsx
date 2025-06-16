@@ -2,6 +2,7 @@
 import Link from "next/link";
 import styles from "./header.module.scss";
 import { usePathname } from "next/navigation";
+import { IoIosMenu } from "react-icons/io";
 const Header = ({}) => {
   const pathName = usePathname();
 
@@ -10,6 +11,9 @@ const Header = ({}) => {
       <Link href="/">
         <div className={styles.header__title}>egor_kutsiy</div>
       </Link>
+      <div className={styles.header__mobile_menu}>
+        <IoIosMenu />
+      </div>
       <div className={styles.header__nav_bar}>
         <nav className={styles.header__nav}>
           <Link href="/">
