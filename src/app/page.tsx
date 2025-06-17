@@ -16,6 +16,10 @@ const HelloPage: NextPage = ({}) => {
               <FaAngleRight />
               Front-end developer
             </div>
+
+            <div className={styles.hello__title_glow_1}></div>
+            <div className={styles.hello__title_glow_2}></div>
+            <div className={styles.hello__title_glow_3}></div>
           </div>
 
           <div className={styles.hello__github}>
