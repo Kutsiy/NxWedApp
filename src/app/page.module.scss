@@ -26,14 +26,14 @@
     &_glow_1 {
       display: none;
       position: absolute;
-      width: 200px;
-      height: 200px;
+      width: 230px;
+      height: 230px;
       border-radius: 50px;
       left: 5px;
       top: 210px;
       background-color: rgba(0, 255, 229);
       filter: blur(60px);
-      opacity: 0.3;
+      opacity: 0.25;
       z-index: 1;
     }
     &_glow_2 {
@@ -46,7 +46,7 @@
       bottom: 200px;
       filter: blur(60px);
       background-color: rgba(97, 95, 255, 1);
-      opacity: 0.3;
+      opacity: 0.2;
       z-index: 1;
     }
 
@@ -57,10 +57,10 @@
       height: 200px;
       border-radius: 25px;
       right: -30px;
-      bottom: 200px;
+      bottom: 180px;
       filter: blur(60px);
       background-color: rgba(97, 95, 255, 1);
-      opacity: 0.3;
+      opacity: 0.2;
       z-index: 1;
     }
 

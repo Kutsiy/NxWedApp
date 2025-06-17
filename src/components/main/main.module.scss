@@ -16,4 +16,14 @@
       margin: 5px 15px;
     }
   }
+
+  @media (min-width: 1875px) and (min-height: 1000px) {
+    width: 1800px;
+    height: 970px;
+  }
+
+  @media (min-width: 2500px) and (min-height: 1100px) {
+    width: 2490px;
+    height: 1090px;
+  }
 }
