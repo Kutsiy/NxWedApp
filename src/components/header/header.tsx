@@ -3,23 +3,19 @@ import Link from "next/link";
 import styles from "./header.module.scss";
 import { usePathname } from "next/navigation";
 import { IoIosMenu, IoMdClose } from "react-icons/io";
-import { useState } from "react";
 import { useHeaderStore } from "@/stores/header/header-store-provider";
 const Header = ({}) => {
   const pathName = usePathname();
-  const [mobileMenuOpen, mobileMenuOpenChange] = useState(false);
+  const isOpenMenu = useHeaderStore((state) => state.isOpen);
   const openMenu = useHeaderStore((state) => state.openMenu);
   const closeMenu = useHeaderStore((state) => state.closeMenu);
 
   const changeModileMenuOpenStatus = () => {
-    if (mobileMenuOpen) {
-      mobileMenuOpenChange(false);
+    if (isOpenMenu) {
       closeMenu();
     } else {
-      mobileMenuOpenChange(true);
       openMenu();
     }
-    console.log(mobileMenuOpen);
   };
 
   return (
@@ -28,7 +24,7 @@ const Header = ({}) => {
         <div className={styles.header__title}>egor_kutsiy</div>
       </Link>
       <div className={styles.header__mobile_menu}>
-        {mobileMenuOpen ? (
+        {isOpenMenu ? (
           <IoMdClose onClick={changeModileMenuOpenStatus} />
         ) : (
           <IoIosMenu onClick={changeModileMenuOpenStatus} />
