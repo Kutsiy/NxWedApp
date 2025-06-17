@@ -2,20 +2,8 @@ import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./styles/globals.scss";
 import "./styles/variables.scss";
-import Main from "@/components/main/main";
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/footer";
 import { HeaderStoreProvider } from "../stores/header/header-store-provider";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import Wrapper from "../components/wrapper/wrapper";
 
 export const metadata: Metadata = {
   title: "egor_kutsiy",
@@ -35,13 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${firaCode.variable}`}>
       <body className={`${firaCode.variable}`}>
-        <Main>
-          <HeaderStoreProvider>
-            <Header />
-          </HeaderStoreProvider>
-          <main>{children}</main>
-          <Footer />
-        </Main>
+        <HeaderStoreProvider>
+          <Wrapper>{children}</Wrapper>
+        </HeaderStoreProvider>
       </body>
     </html>
   );
