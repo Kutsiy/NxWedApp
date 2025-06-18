@@ -1,0 +1,30 @@
+.dropdown {
+  &__container {
+    font-size: 1.25rem;
+  }
+
+  &__title {
+    color: white;
+    padding: 12px 12px;
+    cursor: pointer;
+
+    &_into {
+      display: flex;
+      gap: 8px;
+    }
+
+    &_sign {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__elements {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 12px;
+  }
+
+  &__element {
+    display: flex;
+  }
+}
