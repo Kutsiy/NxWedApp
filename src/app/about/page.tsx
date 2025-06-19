@@ -14,6 +14,20 @@ const AboutPage: NextPage = ({}) => {
             <DropItem>fdfdfdddf</DropItem>
             <DropItem icon={<HiOutlineCog />}>Bfdfdfdfd</DropItem>
             <DropItem icon={<HiOutlineCog />}>fffddffdfdd</DropItem>
+            <Dropdown
+              title={<DropItem icon={<HiOutlineCog />}>bio</DropItem>}
+              type="light"
+            >
+              <DropItem icon={<HiOutlineCog />}>Bfdfdfdfd</DropItem>
+              <DropItem icon={<HiOutlineCog />}>fffddffdfdd</DropItem>
+              <Dropdown
+                title={<DropItem icon={<HiOutlineCog />}>bio</DropItem>}
+                type="light"
+              >
+                <DropItem icon={<HiOutlineCog />}>Bfdfdfdfd</DropItem>
+                <DropItem icon={<HiOutlineCog />}>fffddffdfdd</DropItem>
+              </Dropdown>
+            </Dropdown>
           </Dropdown>
         </div>
       </div>

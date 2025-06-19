@@ -6,10 +6,11 @@ import {
   MdArrowRight,
   MdKeyboardArrowRight,
   MdArrowDropDown,
+  MdKeyboardArrowDown,
 } from "react-icons/md";
 
 interface Props {
-  title: string;
+  title: string | ReactNode;
   width?: string;
   height?: string;
   type?: "heavy" | "light";
@@ -26,27 +27,31 @@ const Dropdown = ({
   type = "heavy",
 }: Props) => {
   const [dropOpen, changeOpen] = useState(false);
+  const Icon =
+    type === "heavy"
+      ? dropOpen
+        ? MdArrowDropDown
+        : MdArrowRight
+      : dropOpen
+      ? MdKeyboardArrowDown
+      : MdKeyboardArrowRight;
 
   return (
-    <div className={styles.dropdown__container} style={{ width }}>
+    <div
+      className={styles.dropdown__container}
+      style={{ width: type === "light" ? "100%" : width }}
+    >
       <div
         className={styles.dropdown__title}
         style={{
-          height,
+          height: type === "light" ? "25px" : height,
           borderBottom: type === "light" ? "none" : "var(--glass-border)",
+          padding: type === "light" ? "none" : "12px",
         }}
         onClick={() => changeOpen(!dropOpen)}
       >
         <span className={styles.dropdown__title_into}>
-          {type === "heavy" ? (
-            dropOpen ? (
-              <MdArrowDropDown className={styles.dropdown__title_sign} />
-            ) : (
-              <MdArrowRight className={styles.dropdown__title_sign} />
-            )
-          ) : (
-            <MdKeyboardArrowRight className={styles.dropdown__title_sign} />
-          )}
+          <Icon className={styles.dropdown__title_sign} />
           {title}
         </span>
       </div>
@@ -61,6 +66,8 @@ const Dropdown = ({
           className={`${styles.dropdown__elements} `}
           style={{
             gap: childGap,
+            padding: type === "light" ? "0px" : "12px",
+            paddingLeft: type === "light" ? "27px" : "12px",
           }}
         >
           {children !== null && !Array.isArray(children) ? (
