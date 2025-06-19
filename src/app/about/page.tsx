@@ -1,6 +1,8 @@
 import { NextPage } from "next";
 import styles from "./page.module.scss";
 import Dropdown from "../../components/dropdown/dropdown";
+import DropItem from "../../components/dropitem/dropitem";
+import { HiOutlineCog } from "react-icons/hi";
 
 const AboutPage: NextPage = ({}) => {
   return (
@@ -9,8 +11,9 @@ const AboutPage: NextPage = ({}) => {
         <div className={styles.about__pages}></div>
         <div className={styles.about__accordion}>
           <Dropdown title="personal-info">
-            <div>Adfdfd</div>
-            <div>Bfdfdfdfd</div>
+            <DropItem>fdfdfdddf</DropItem>
+            <DropItem icon={<HiOutlineCog />}>Bfdfdfdfd</DropItem>
+            <DropItem icon={<HiOutlineCog />}>fffddffdfdd</DropItem>
           </Dropdown>
         </div>
       </div>

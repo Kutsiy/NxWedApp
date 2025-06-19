@@ -1,0 +1,22 @@
+.dropitem {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 99%;
+    overflow: hidden;
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+}

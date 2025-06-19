@@ -21,7 +21,14 @@
   &__elements {
     display: flex;
     flex-direction: column;
-    padding: 12px 12px;
+    padding: 12px;
+    overflow: hidden;
+
+    &_container {
+      height: 100%;
+      overflow: hidden;
+      transition: 0.5s;
+    }
   }
 
   &__element {
