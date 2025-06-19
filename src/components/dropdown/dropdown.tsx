@@ -16,6 +16,7 @@ interface Props {
   type?: "heavy" | "light";
   childGap?: string;
   children: ReactNode | ReactNode[];
+  topBorder?: boolean;
 }
 
 const Dropdown = ({
@@ -25,6 +26,7 @@ const Dropdown = ({
   children,
   childGap = "8px",
   type = "heavy",
+  topBorder = false,
 }: Props) => {
   const [dropOpen, changeOpen] = useState(false);
   const Icon =
@@ -46,6 +48,7 @@ const Dropdown = ({
         style={{
           height: type === "light" ? "25px" : height,
           borderBottom: type === "light" ? "none" : "var(--glass-border)",
+          borderTop: topBorder ? "var(--glass-border)" : "none",
           padding: type === "light" ? "none" : "12px",
         }}
         onClick={() => changeOpen(!dropOpen)}
@@ -58,7 +61,7 @@ const Dropdown = ({
       <div
         className={styles.dropdown__elements_container}
         style={{
-          height: dropOpen ? "100%" : "0px",
+          maxHeight: dropOpen ? "100%" : "0px",
           opacity: dropOpen ? "1" : "0",
         }}
       >
@@ -71,10 +74,19 @@ const Dropdown = ({
           }}
         >
           {children !== null && !Array.isArray(children) ? (
-            <div className={styles.dropdown__element}>{children}</div>
+            <div
+              className={styles.dropdown__element}
+              style={{ maxHeight: dropOpen ? "100%" : "0px" }}
+            >
+              {children}
+            </div>
           ) : (
             children?.map((element: ReactNode, index) => (
-              <div key={index} className={styles.dropdown__element}>
+              <div
+                key={index}
+                className={styles.dropdown__element}
+                style={{ maxHeight: dropOpen ? "100%" : "0px" }}
+              >
                 {element}
               </div>
             ))

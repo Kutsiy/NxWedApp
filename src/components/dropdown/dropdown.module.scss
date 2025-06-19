@@ -23,7 +23,7 @@
     overflow: hidden;
 
     &_container {
-      height: 100%;
+      max-height: 100%;
       overflow: hidden;
       transition: 0.5s;
     }
@@ -31,5 +31,6 @@
 
   &__element {
     display: flex;
+    transition: 0.5s;
   }
 }
