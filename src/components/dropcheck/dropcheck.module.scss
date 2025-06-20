@@ -1,0 +1,29 @@
+.dropcheck {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 99%;
+    overflow: hidden;
+  }
+
+  &__check_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-left: 1px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+}
