@@ -11,5 +11,6 @@
     height: 100%;
     border-right: var(--glass-border);
     display: flex;
+    flex-direction: column;
   }
 }

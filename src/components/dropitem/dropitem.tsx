@@ -8,6 +8,8 @@ interface Props {
   icon?: ReactNode;
   color?: string;
   iconSize?: string;
+  lightOnHover?: boolean;
+  cursorPointer?: boolean;
 }
 
 const DropItem = ({
@@ -15,9 +17,16 @@ const DropItem = ({
   children,
   color = "#bcbcbc",
   iconSize = "1.5rem",
+  cursorPointer = false,
+  lightOnHover = false,
 }: Props) => {
   return (
-    <div className={styles.dropitem__container}>
+    <div
+      className={`${styles.dropitem__container} ${
+        lightOnHover ? styles.hoverable : ""
+      }`}
+      style={{ cursor: cursorPointer ? "pointer" : "default" }}
+    >
       {icon && (
         <div
           className={styles.dropitem__icon}

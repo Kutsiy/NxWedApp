@@ -19,3 +19,12 @@
     overflow-wrap: anywhere;
   }
 }
+
+.hoverable {
+  transition: 0.3s;
+}
+
+.hoverable:hover {
+  color: white;
+  transition: 0.3s;
+}
