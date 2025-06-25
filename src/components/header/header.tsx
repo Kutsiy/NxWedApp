@@ -42,12 +42,13 @@ const Header = ({}) => {
               _hello
             </div>
           </Link>
-          <Link href="/about">
+          <Link href="/about/professional-info">
             <div
               className={styles.header__nav_btn}
               style={{
-                borderBottom:
-                  pathName === "/about" ? "2px solid #FFDA61" : "none",
+                borderBottom: pathName.startsWith("/about")
+                  ? "2px solid #FFDA61"
+                  : "none",
               }}
             >
               _about-me

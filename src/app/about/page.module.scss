@@ -18,6 +18,22 @@
     flex-shrink: 0;
     height: 100%;
     border-right: var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    padding-top: 10px;
+    gap: 30px;
+  }
+
+  &__page {
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      color: gray;
+      transition: 0.3s;
+    }
   }
 
   &__accordion {
