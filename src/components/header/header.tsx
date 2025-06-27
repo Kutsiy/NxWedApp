@@ -10,7 +10,7 @@ const Header = ({}) => {
   const openMenu = useHeaderStore((state) => state.openMenu);
   const closeMenu = useHeaderStore((state) => state.closeMenu);
 
-  const changeModileMenuOpenStatus = () => {
+  const changeMobileMenuOpenStatus = () => {
     if (isOpenMenu) {
       closeMenu();
     } else {
@@ -25,9 +25,9 @@ const Header = ({}) => {
       </Link>
       <div className={styles.header__mobile_menu}>
         {isOpenMenu ? (
-          <IoMdClose onClick={changeModileMenuOpenStatus} />
+          <IoMdClose onClick={changeMobileMenuOpenStatus} />
         ) : (
-          <IoIosMenu onClick={changeModileMenuOpenStatus} />
+          <IoIosMenu onClick={changeMobileMenuOpenStatus} />
         )}
       </div>
       <div className={styles.header__nav_bar}>

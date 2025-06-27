@@ -46,6 +46,10 @@ const ProjectsPage: NextPage = ({}) => {
           </DropCheck>
         </Dropdown>
       </div>
+      <div className={styles.projects__content}>
+        <div className={styles.projects__content_top}></div>
+        <div className={styles.projects__content_block}></div>
+      </div>
     </div>
   );
 };

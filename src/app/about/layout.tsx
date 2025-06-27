@@ -108,7 +108,10 @@ const AboutPage: NextPage<Props> = ({ children }: Props) => {
           </Dropdown>
         </div>
       </div>
-      <div>{children}</div>
+      <div className={styles.about__content}>
+        <div className={styles.about__content_top}></div>
+        <div className={styles.about__content_block}>{children}</div>
+      </div>
     </div>
   );
 };

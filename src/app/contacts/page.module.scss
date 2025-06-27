@@ -7,10 +7,106 @@
   }
 
   &__menu {
-    width: var(--left-margin);
+    min-width: var(--left-margin);
     height: 100%;
     border-right: var(--glass-border);
     display: flex;
     flex-direction: column;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    &_top {
+      width: 100%;
+      min-height: 40px;
+      border-bottom: var(--glass-border);
+    }
+
+    &_block {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__contact_form {
+    width: 532px;
+    height: 100%;
+    border-right: var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 80px;
+  }
+
+  &__form {
+    width: 272px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__form_block {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    & > input {
+      border: 1px solid rgba(49, 65, 88, 1);
+      border-radius: 5px;
+      width: 100%;
+      height: 38px;
+      transition: 0.5s;
+      padding: 5px;
+
+      &:focus {
+        border: 1px solid white;
+        outline: none;
+        transition: 0.5s;
+      }
+    }
+
+    & > textarea {
+      border: 1px solid rgba(49, 65, 88, 1);
+      border-radius: 5px;
+      width: 272px;
+      height: 100px;
+      transition: 0.5s;
+      padding: 5px;
+      resize: none;
+
+      &:focus {
+        border: 1px solid white;
+        outline: none;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  &__submit_button {
+    width: 142px;
+    height: 40px;
+    background-color: rgba(49, 65, 88, 1);
+    border-radius: 5px;
+    border: none;
+    padding: 10px 12px;
+    color: rgba(98, 116, 142, 1);
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.5s;
+      color: white;
+    }
+  }
+
+  &__code_snippet {
+    height: 100%;
+    padding: 12px 40px;
   }
 }
