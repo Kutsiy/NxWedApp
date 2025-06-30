@@ -1,3 +1,4 @@
+"use client";
 import { NextPage } from "next";
 import styles from "./page.module.scss";
 import Dropdown from "@/components/dropdown/dropdown";
@@ -7,16 +8,25 @@ import { IoMdMail } from "react-icons/io";
 import { FiExternalLink } from "react-icons/fi";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { useState } from "react";
 
 const ContactsPage: NextPage = ({}) => {
+  const todayFormatted = new Intl.DateTimeFormat("en-GB", {
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+  }).format(new Date());
+
+  const [state, changeState] = useState("");
+
   const codeString = `const button = document.querySelector('#sendBtn');
 
 const message = {
 	name: "Jonathan Davis",
 	email: "",
-	message: "",
-	date: "Thu 21 Apr"
-}
+	message: "${state}",
+	date: "${todayFormatted}"
+} 
 
 button.addEventListener('click', () => {
 	form.send(message);
@@ -80,7 +90,11 @@ button.addEventListener('click', () => {
               </div>
               <div className={styles.contacts__form_block}>
                 <label htmlFor="message">_message</label>
-                <textarea id="message" placeholder="your message here …" />
+                <textarea
+                  id="message"
+                  placeholder="your message here …"
+                  onChange={(value) => changeState(value.target.value)}
+                />
               </div>
               <button className={styles.contacts__submit_button}>
                 submit-message
@@ -92,10 +106,20 @@ button.addEventListener('click', () => {
               language="javascript"
               style={atomOneDark}
               showLineNumbers
-              lineNumberStyle={{ paddingRight: "20px", paddingBottom: 5 }}
+              lineNumberStyle={{
+                paddingRight: "20px",
+                paddingBottom: 5,
+                color: "rgba(145, 161, 185, 1)",
+                whiteSpace: "pre-wrap",
+              }}
               customStyle={{
                 backgroundColor: "rgba(1, 0, 0, 0)",
-                width: "500px",
+                color: "rgba(96, 95, 255, 1)",
+                minWidth: "400px",
+                maxWidth: "600px",
+                overflowX: "hidden",
+                whiteSpace: "pre-wrap",
+                wordBreak: "break-word",
               }}
               wrapLongLines={true}
               wrapLines={true}
