@@ -17,6 +17,7 @@ interface Props {
   childGap?: string;
   children: ReactNode | ReactNode[];
   topBorder?: boolean;
+  opened?: boolean;
 }
 
 const Dropdown = ({
@@ -27,8 +28,9 @@ const Dropdown = ({
   childGap = "8px",
   type = "heavy",
   topBorder = false,
+  opened = false,
 }: Props) => {
-  const [dropOpen, changeOpen] = useState(false);
+  const [dropOpen, changeOpen] = useState(opened ? true : false);
   const Icon =
     type === "heavy"
       ? dropOpen

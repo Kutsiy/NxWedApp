@@ -36,13 +36,13 @@ button.addEventListener('click', () => {
   return (
     <div className={styles.contacts__wrapper}>
       <div className={styles.contacts__menu}>
-        <Dropdown title="contacts">
+        <Dropdown title="contacts" opened>
           <DropItem icon={<IoMdMail />}>user@gmail.com</DropItem>
           <DropItem icon={<FaPhoneAlt />} iconSize="1.4rem">
             +3598246359
           </DropItem>
         </Dropdown>
-        <Dropdown title="find-me-also-in" topBorder={true}>
+        <Dropdown title="find-me-also-in" topBorder={true} opened>
           <DropItem
             icon={<FiExternalLink />}
             cursorPointer={true}
