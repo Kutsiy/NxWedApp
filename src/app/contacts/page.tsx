@@ -16,16 +16,17 @@ const ContactsPage: NextPage = ({}) => {
     day: "2-digit",
     month: "short",
   }).format(new Date());
-
-  const [state, changeState] = useState("");
+  const [name, changeName] = useState("");
+  const [email, changeEmail] = useState("");
+  const [message, changeMessage] = useState("");
 
   const codeString = `const button = document.querySelector('#sendBtn');
 
 const message = {
-	name: "Jonathan Davis",
-	email: "",
-	message: "${state}",
-	date: "${todayFormatted}"
+  name: "${name}",
+  email: "${email}",
+  message: "${message}",
+  date: "${todayFormatted}"
 } 
 
 button.addEventListener('click', () => {
@@ -82,21 +83,32 @@ button.addEventListener('click', () => {
             <form className={styles.contacts__form}>
               <div className={styles.contacts__form_block}>
                 <label htmlFor="name">_name</label>
-                <input type="text" id="name" />
+                <input
+                  type="text"
+                  id="name"
+                  onChange={(value) => changeName(value.target.value)}
+                />
               </div>
               <div className={styles.contacts__form_block}>
                 <label htmlFor="email">_email</label>
-                <input type="text" id="email" />
+                <input
+                  type="text"
+                  id="email"
+                  onChange={(value) => changeEmail(value.target.value)}
+                />
               </div>
               <div className={styles.contacts__form_block}>
                 <label htmlFor="message">_message</label>
                 <textarea
                   id="message"
                   placeholder="your message here …"
-                  onChange={(value) => changeState(value.target.value)}
+                  onChange={(value) => changeMessage(value.target.value)}
                 />
               </div>
-              <button className={styles.contacts__submit_button}>
+              <button
+                className={styles.contacts__submit_button}
+                disabled={!name || !email || !message}
+              >
                 submit-message
               </button>
             </form>

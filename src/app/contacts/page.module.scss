@@ -63,6 +63,7 @@
       height: 38px;
       transition: 0.5s;
       padding: 5px;
+      background-color: rgba(2, 6, 24, 1);
 
       &:focus {
         border: 1px solid white;
@@ -79,6 +80,7 @@
       transition: 0.5s;
       padding: 5px;
       resize: none;
+      background-color: rgba(2, 6, 24, 1);
 
       &:focus {
         border: 1px solid white;
@@ -91,17 +93,19 @@
   &__submit_button {
     width: 142px;
     height: 40px;
-    background-color: rgba(49, 65, 88, 1);
+    background-color: rgba(255, 184, 106, 1);
     border-radius: 5px;
     border: none;
     padding: 10px 12px;
-    color: rgba(98, 116, 142, 1);
+    color: black;
     transition: 0.5s;
     cursor: pointer;
+    font-weight: 700;
 
-    &:hover {
-      transition: 0.5s;
-      color: white;
+    &:disabled {
+      background-color: rgba(49, 65, 88, 1);
+      cursor: not-allowed;
+      color: rgba(98, 116, 142, 1);
     }
   }
 
