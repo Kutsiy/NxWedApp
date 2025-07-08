@@ -13,7 +13,7 @@ const Menu = ({}) => {
           _hello
         </div>
       </Link>
-      <Link href="/about">
+      <Link href="/about/professional-info    ">
         <div className={styles.menu__nav_btn} onClick={closeMenu}>
           _about-me
         </div>

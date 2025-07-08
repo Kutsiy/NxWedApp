@@ -86,6 +86,7 @@ button.addEventListener('click', () => {
                 <input
                   type="text"
                   id="name"
+                  placeholder="your name here …"
                   onChange={(value) => changeName(value.target.value)}
                 />
               </div>
@@ -94,6 +95,7 @@ button.addEventListener('click', () => {
                 <input
                   type="text"
                   id="email"
+                  placeholder="your email here …"
                   onChange={(value) => changeEmail(value.target.value)}
                 />
               </div>

@@ -63,6 +63,7 @@
       height: 38px;
       transition: 0.5s;
       padding: 5px;
+      padding-left: 8px;
       background-color: rgba(2, 6, 24, 1);
 
       &:focus {
@@ -79,6 +80,7 @@
       height: 100px;
       transition: 0.5s;
       padding: 5px;
+      padding-left: 8px;
       resize: none;
       background-color: rgba(2, 6, 24, 1);
 
@@ -106,6 +108,10 @@
       background-color: rgba(49, 65, 88, 1);
       cursor: not-allowed;
       color: rgba(98, 116, 142, 1);
+    }
+
+    &:focus {
+      background-color: rgba(255, 214, 167, 1);
     }
   }
 
