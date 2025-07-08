@@ -3,15 +3,15 @@ import { NextPage } from "next";
 import styles from "./page.module.scss";
 import Dropdown from "../../components/dropdown/dropdown";
 import DropItem from "../../components/dropitem/dropitem";
-import { IoLogoMarkdown } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
-import { FaFolder, FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { ReactNode } from "react";
 import { BsFillTerminalFill } from "react-icons/bs";
 import { FaRegCircle } from "react-icons/fa";
 import { RiGamepadFill } from "react-icons/ri";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import AboutAccordion from "../../components/about_accordion/about_accordion";
 
 interface Props {
   children: ReactNode;
@@ -65,41 +65,7 @@ const AboutPage: NextPage<Props> = ({ children }: Props) => {
           </div>
         </div>
         <div className={styles.about__accordion}>
-          <Dropdown title="personal-info">
-            <Dropdown
-              title={
-                <DropItem icon={<FaFolder />} color="#FF637E">
-                  bio
-                </DropItem>
-              }
-              type="light"
-            >
-              <DropItem icon={<IoLogoMarkdown />}>Bfdfdfdfd</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>fffddffdfdd</DropItem>
-            </Dropdown>
-            <Dropdown
-              title={
-                <DropItem icon={<FaFolder />} color="#00D5BE">
-                  interests
-                </DropItem>
-              }
-              type="light"
-            >
-              <DropItem icon={<IoLogoMarkdown />}>Bfdfdfdfd</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>fffddffdfdd</DropItem>
-            </Dropdown>
-            <Dropdown
-              title={
-                <DropItem icon={<FaFolder />} color="#615FFF">
-                  education
-                </DropItem>
-              }
-              type="light"
-            >
-              <DropItem icon={<IoLogoMarkdown />}>high-school</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>university</DropItem>
-            </Dropdown>
-          </Dropdown>
+          <AboutAccordion />
           <Dropdown title="contacts" topBorder={true}>
             <DropItem icon={<IoMdMail />}>user@gmail.com</DropItem>
             <DropItem icon={<FaPhoneAlt />} iconSize="1.4rem">

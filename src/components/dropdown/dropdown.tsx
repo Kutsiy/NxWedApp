@@ -18,6 +18,7 @@ interface Props {
   children: ReactNode | ReactNode[];
   topBorder?: boolean;
   opened?: boolean;
+  fontSize?: "1.15rem" | "1.25rem";
 }
 
 const Dropdown = ({
@@ -29,6 +30,7 @@ const Dropdown = ({
   type = "heavy",
   topBorder = false,
   opened = false,
+  fontSize = "1.25rem",
 }: Props) => {
   const [dropOpen, changeOpen] = useState(opened ? true : false);
   const Icon =
@@ -52,6 +54,7 @@ const Dropdown = ({
           borderBottom: type === "light" ? "none" : "var(--glass-border)",
           borderTop: topBorder ? "var(--glass-border)" : "none",
           padding: type === "light" ? "none" : "12px",
+          fontSize,
         }}
         onClick={() => changeOpen(!dropOpen)}
       >
