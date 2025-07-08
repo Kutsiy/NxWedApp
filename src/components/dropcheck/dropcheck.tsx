@@ -11,6 +11,7 @@ interface Props {
   iconSize?: string;
   checkValue: boolean;
   changeFunc: Dispatch<SetStateAction<boolean>>;
+  cursorPointer?: boolean;
 }
 
 const DropCheck = ({
@@ -20,11 +21,13 @@ const DropCheck = ({
   iconSize = "1.5rem",
   checkValue,
   changeFunc,
+  cursorPointer = true,
 }: Props) => {
   return (
     <div
       className={styles.dropcheck__container}
       onClick={() => changeFunc(!checkValue)}
+      style={{ cursor: cursorPointer ? "pointer" : "default" }}
     >
       <div className={styles.dropcheck__check_box}>
         {checkValue ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}

@@ -17,7 +17,7 @@ const DropItem = ({
   children,
   color = "#bcbcbc",
   iconSize = "1.5rem",
-  cursorPointer = false,
+  cursorPointer = true,
   lightOnHover = false,
 }: Props) => {
   return (
