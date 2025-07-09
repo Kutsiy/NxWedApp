@@ -5,6 +5,7 @@ import Dropdown from "../../components/dropdown/dropdown";
 import DropCheck from "../../components/dropcheck/dropcheck";
 import { FaReact, FaHtml5, FaCss3, FaAngular } from "react-icons/fa";
 import { useState } from "react";
+import ProjectCard from "../../components/project_card/project_card";
 
 const ProjectsPage: NextPage = ({}) => {
   const [checkReact, checkReactFunc] = useState(false);
@@ -15,7 +16,7 @@ const ProjectsPage: NextPage = ({}) => {
   return (
     <div className={styles.projects__wrapper}>
       <div className={styles.projects__menu}>
-        <Dropdown title="projects">
+        <Dropdown title="projects" opened>
           <DropCheck
             icon={<FaReact />}
             checkValue={checkReact}
@@ -48,7 +49,9 @@ const ProjectsPage: NextPage = ({}) => {
       </div>
       <div className={styles.projects__content}>
         <div className={styles.projects__content_top}></div>
-        <div className={styles.projects__content_block}></div>
+        <div className={styles.projects__content_block}>
+          <ProjectCard></ProjectCard>
+        </div>
       </div>
     </div>
   );

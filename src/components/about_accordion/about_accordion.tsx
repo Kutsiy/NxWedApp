@@ -13,7 +13,7 @@ const AboutAccordion = ({}) => {
     if (pathName === "/about/professional-info") {
       return (
         <>
-          <Dropdown title="professional-info" fontSize="1.15rem">
+          <Dropdown title="professional-info" fontSize="1.15rem" opened>
             <Dropdown
               title={
                 <DropItem icon={<FaFolder />} color="#FF637E">
@@ -53,7 +53,7 @@ const AboutAccordion = ({}) => {
     } else if (pathName === "/about/personal-info") {
       return (
         <>
-          <Dropdown title="personal-info">
+          <Dropdown title="personal-info" opened>
             <Dropdown
               title={
                 <DropItem icon={<FaFolder />} color="#FF637E">
@@ -67,8 +67,8 @@ const AboutAccordion = ({}) => {
             </Dropdown>
             <Dropdown
               title={
-                <DropItem icon={<FaFolder />} color="#00D5BE">
-                  interests
+                <DropItem icon={<FaFolder />} color="#00D5B3">
+                  skedob
                 </DropItem>
               }
               type="light"
@@ -93,7 +93,7 @@ const AboutAccordion = ({}) => {
     } else if (pathName === "/about/hobbies") {
       return (
         <>
-          <Dropdown title="hobbies">
+          <Dropdown title="hobbies" opened>
             <Dropdown
               title={
                 <DropItem icon={<FaFolder />} color="#FF637E">

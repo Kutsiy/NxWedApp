@@ -66,7 +66,7 @@ const AboutPage: NextPage<Props> = ({ children }: Props) => {
         </div>
         <div className={styles.about__accordion}>
           <AboutAccordion />
-          <Dropdown title="contacts" topBorder={true}>
+          <Dropdown title="contacts" topBorder={true} opened>
             <DropItem icon={<IoMdMail />}>user@gmail.com</DropItem>
             <DropItem icon={<FaPhoneAlt />} iconSize="1.4rem">
               +3598246359
