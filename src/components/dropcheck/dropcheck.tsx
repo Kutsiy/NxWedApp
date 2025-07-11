@@ -12,6 +12,7 @@ interface Props {
   checkValue: boolean;
   changeFunc: Dispatch<SetStateAction<boolean>>;
   cursorPointer?: boolean;
+  onClick?: () => void;
 }
 
 const DropCheck = ({
@@ -22,11 +23,17 @@ const DropCheck = ({
   checkValue,
   changeFunc,
   cursorPointer = true,
+  onClick,
 }: Props) => {
   return (
     <div
       className={styles.dropcheck__container}
-      onClick={() => changeFunc(!checkValue)}
+      onClick={() => {
+        changeFunc(!checkValue);
+        if (onClick) {
+          onClick();
+        }
+      }}
       style={{ cursor: cursorPointer ? "pointer" : "default" }}
     >
       <div className={styles.dropcheck__check_box}>

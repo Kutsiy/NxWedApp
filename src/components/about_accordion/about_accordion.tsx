@@ -105,28 +105,6 @@ const AboutAccordion = ({}) => {
               <DropItem icon={<IoLogoMarkdown />}>Bfdfdfdfd</DropItem>
               <DropItem icon={<IoLogoMarkdown />}>fffddffdfdd</DropItem>
             </Dropdown>
-            <Dropdown
-              title={
-                <DropItem icon={<FaFolder />} color="#00D5BE">
-                  interests
-                </DropItem>
-              }
-              type="light"
-            >
-              <DropItem icon={<IoLogoMarkdown />}>Bfdfdfdfd</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>fffddffdfdd</DropItem>
-            </Dropdown>
-            <Dropdown
-              title={
-                <DropItem icon={<FaFolder />} color="#615FFF">
-                  education
-                </DropItem>
-              }
-              type="light"
-            >
-              <DropItem icon={<IoLogoMarkdown />}>high-school</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>university</DropItem>
-            </Dropdown>
           </Dropdown>
         </>
       );
