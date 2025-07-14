@@ -92,6 +92,14 @@ const ProjectsPage: NextPage = ({}) => {
         </div>
         <div className={styles.projects__content_block}>
           <ProjectCard></ProjectCard>
+          <ProjectCard></ProjectCard>
+          <ProjectCard></ProjectCard>
+          <ProjectCard></ProjectCard>
+          <ProjectCard></ProjectCard>
+          <ProjectCard></ProjectCard>
+          <ProjectCard></ProjectCard>
+          <ProjectCard></ProjectCard>
+          <ProjectCard></ProjectCard>
         </div>
       </div>
     </div>
