@@ -33,4 +33,10 @@
     display: flex;
     transition: 0.5s;
   }
+
+  @media (max-width: 750px) {
+    &__title {
+      background-color: rgba(49, 65, 88, 1);
+    }
+  }
 }

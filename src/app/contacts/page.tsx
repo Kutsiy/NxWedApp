@@ -36,6 +36,7 @@ button.addEventListener('click', () => {
   return (
     <div className={styles.contacts__wrapper}>
       <div className={styles.contacts__menu}>
+        <div className={styles.contacts__phone_title}>_contact-me</div>
         <Dropdown title="contacts" opened>
           <DropItem icon={<IoMdMail />}>user@gmail.com</DropItem>
           <DropItem icon={<FaPhoneAlt />} iconSize="1.4rem">
@@ -82,7 +83,7 @@ button.addEventListener('click', () => {
           <div className={styles.contacts__contact_form}>
             <form className={styles.contacts__form}>
               <div className={styles.contacts__form_block}>
-                <label htmlFor="name">_name</label>
+                <label htmlFor="name">_name:</label>
                 <input
                   type="text"
                   id="name"
@@ -91,7 +92,7 @@ button.addEventListener('click', () => {
                 />
               </div>
               <div className={styles.contacts__form_block}>
-                <label htmlFor="email">_email</label>
+                <label htmlFor="email">_email:</label>
                 <input
                   type="text"
                   id="email"
@@ -100,7 +101,7 @@ button.addEventListener('click', () => {
                 />
               </div>
               <div className={styles.contacts__form_block}>
-                <label htmlFor="message">_message</label>
+                <label htmlFor="message">_message:</label>
                 <textarea
                   id="message"
                   placeholder="your message here …"

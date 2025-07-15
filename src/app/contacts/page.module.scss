@@ -4,6 +4,8 @@
     font-size: 1.25rem;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   &__menu {
@@ -12,6 +14,10 @@
     border-right: var(--glass-border);
     display: flex;
     flex-direction: column;
+  }
+
+  &__phone_title {
+    display: none;
   }
 
   &__content {
@@ -119,5 +125,36 @@
     min-width: 100%;
     height: 100%;
     padding: 12px 40px;
+  }
+
+  @media (max-width: 750px) {
+    &__wrapper {
+      flex-direction: column;
+      height: 620px;
+    }
+    &__menu {
+      height: auto;
+    }
+
+    &__phone_title {
+      display: block;
+      padding: 15px 18px;
+    }
+
+    &__contact_form {
+      min-width: 100%;
+      height: 100%;
+      padding: 40px 80px;
+    }
+
+    &__content {
+      &_top {
+        display: none;
+      }
+    }
+
+    &__code_snippet {
+      display: none;
+    }
   }
 }
