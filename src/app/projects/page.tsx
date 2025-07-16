@@ -14,6 +14,7 @@ const ProjectsPage: NextPage = ({}) => {
   const [checkHtml, checkHtmlFunc] = useState(false);
   const [checkCss, checkCssFunc] = useState(false);
   const [checkAngular, checkAngularFunc] = useState(false);
+  const [mobileCollapse, changeMobileCollapse] = useState(true);
 
   function addOrRemoveToArray(val: string) {
     setFilterArray((prev) => {
@@ -35,8 +36,18 @@ const ProjectsPage: NextPage = ({}) => {
 
   return (
     <div className={styles.projects__wrapper}>
-      <div className={styles.projects__menu}>
-        <Dropdown title="projects" opened>
+      <div
+        className={`${styles.projects__menu} ${
+          !mobileCollapse ? styles.projects__menu_collapsed : ""
+        }`}
+      >
+        <Dropdown
+          title="projects"
+          opened={mobileCollapse}
+          grayTitleMobile={true}
+          height="40px"
+          onClick={() => changeMobileCollapse((val) => !val)}
+        >
           <DropCheck
             icon={<FaReact />}
             checkValue={checkReact}
@@ -91,7 +102,19 @@ const ProjectsPage: NextPage = ({}) => {
           )}
         </div>
         <div className={styles.projects__content_container}>
-          <div className={styles.projects__content_block}>
+          <div
+            className={`${styles.projects__content_block} ${
+              !mobileCollapse ? styles.projects__content_block_open : ""
+            }`}
+          >
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
             <ProjectCard></ProjectCard>
             <ProjectCard></ProjectCard>
             <ProjectCard></ProjectCard>

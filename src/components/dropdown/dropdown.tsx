@@ -19,6 +19,8 @@ interface Props {
   topBorder?: boolean;
   opened?: boolean;
   fontSize?: "1.15rem" | "1.25rem";
+  grayTitleMobile?: boolean;
+  onClick?: () => void;
 }
 
 const Dropdown = ({
@@ -30,7 +32,9 @@ const Dropdown = ({
   type = "heavy",
   topBorder = false,
   opened = false,
+  grayTitleMobile = false,
   fontSize = "1.25rem",
+  onClick,
 }: Props) => {
   const [dropOpen, changeOpen] = useState(opened ? true : false);
   const Icon =
@@ -45,10 +49,14 @@ const Dropdown = ({
   return (
     <div
       className={styles.dropdown__container}
-      style={{ width: type === "light" ? "100%" : width }}
+      style={{
+        width: type === "light" ? "100%" : width,
+      }}
     >
       <div
-        className={styles.dropdown__title}
+        className={`${styles.dropdown__title} ${
+          grayTitleMobile ? styles.dropdown__mobile : ""
+        }`}
         style={{
           height: type === "light" ? "25px" : height,
           borderBottom: type === "light" ? "none" : "var(--glass-border)",
@@ -56,7 +64,12 @@ const Dropdown = ({
           padding: type === "light" ? "none" : "12px",
           fontSize,
         }}
-        onClick={() => changeOpen(!dropOpen)}
+        onClick={() => {
+          changeOpen(!dropOpen);
+          if (onClick) {
+            onClick();
+          }
+        }}
       >
         <span className={styles.dropdown__title_into}>
           <Icon className={styles.dropdown__title_sign} />

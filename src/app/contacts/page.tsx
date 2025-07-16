@@ -37,13 +37,18 @@ button.addEventListener('click', () => {
     <div className={styles.contacts__wrapper}>
       <div className={styles.contacts__menu}>
         <div className={styles.contacts__phone_title}>_contact-me</div>
-        <Dropdown title="contacts" opened>
+        <Dropdown title="contacts" opened grayTitleMobile={true}>
           <DropItem icon={<IoMdMail />}>user@gmail.com</DropItem>
           <DropItem icon={<FaPhoneAlt />} iconSize="1.4rem">
             +3598246359
           </DropItem>
         </Dropdown>
-        <Dropdown title="find-me-also-in" topBorder={true} opened>
+        <Dropdown
+          title="find-me-also-in"
+          topBorder={true}
+          opened
+          grayTitleMobile={true}
+        >
           <DropItem
             icon={<FiExternalLink />}
             cursorPointer={true}

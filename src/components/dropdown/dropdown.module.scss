@@ -6,14 +6,17 @@
   &__title {
     color: white;
     cursor: pointer;
+    z-index: 10;
 
     &_into {
       display: flex;
       gap: 8px;
+      z-index: 10;
     }
 
     &_sign {
       font-size: 1.7rem;
+      z-index: 10;
     }
   }
 
@@ -21,11 +24,25 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    z-index: 1;
 
     &_container {
       max-height: 100%;
-      overflow: hidden;
+      overflow-y: auto;
       transition: opacity 0.3s, max-height 0.2s;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(98, 116, 142, 1);
+        border-radius: 60px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
     }
   }
 
@@ -35,8 +52,14 @@
   }
 
   @media (max-width: 750px) {
-    &__title {
+    &__mobile {
       background-color: rgba(49, 65, 88, 1);
+    }
+
+    &__elements {
+      &_container {
+        margin-top: 8px;
+      }
     }
   }
 }
