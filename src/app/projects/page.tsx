@@ -41,6 +41,7 @@ const ProjectsPage: NextPage = ({}) => {
           !mobileCollapse ? styles.projects__menu_collapsed : ""
         }`}
       >
+        <div className={styles.projects__mobile_title}>_projects</div>
         <Dropdown
           title="projects"
           opened={mobileCollapse}
@@ -82,7 +83,11 @@ const ProjectsPage: NextPage = ({}) => {
           </DropCheck>
         </Dropdown>
       </div>
-      <div className={styles.projects__content}>
+      <div
+        className={`${styles.projects__content} ${
+          !mobileCollapse ? styles.projects__content_open : ""
+        }`}
+      >
         <div className={styles.projects__content_top}>
           {!!filterArray.length && (
             <div className={styles.projects__content_top_tab}>

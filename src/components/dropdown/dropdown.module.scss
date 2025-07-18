@@ -23,11 +23,11 @@
   &__elements {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     z-index: 1;
+    overflow: hidden;
 
     &_container {
-      max-height: 100%;
+      // max-height: 100%;
       overflow-y: auto;
       transition: opacity 0.3s, max-height 0.2s;
 
@@ -52,6 +52,9 @@
   }
 
   @media (max-width: 750px) {
+    &__container {
+      height: 100%;
+    }
     &__mobile {
       background-color: rgba(49, 65, 88, 1);
     }
