@@ -27,8 +27,6 @@
     overflow: hidden;
 
     &_container {
-      // max-height: 100%;
-      overflow-y: auto;
       transition: opacity 0.3s, max-height 0.2s;
 
       &::-webkit-scrollbar {

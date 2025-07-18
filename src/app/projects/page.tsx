@@ -48,6 +48,7 @@ const ProjectsPage: NextPage = ({}) => {
           grayTitleMobile={true}
           height="40px"
           onClick={() => changeMobileCollapse((val) => !val)}
+          overflowY="auto"
         >
           <DropCheck
             icon={<FaReact />}

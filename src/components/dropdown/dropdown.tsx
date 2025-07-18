@@ -21,6 +21,7 @@ interface Props {
   fontSize?: "1.15rem" | "1.25rem";
   grayTitleMobile?: boolean;
   onClick?: () => void;
+  overflowY?: "hidden" | "auto";
 }
 
 const Dropdown = ({
@@ -34,6 +35,7 @@ const Dropdown = ({
   opened = false,
   grayTitleMobile = false,
   fontSize = "1.25rem",
+  overflowY = "hidden",
   onClick,
 }: Props) => {
   const [dropOpen, changeOpen] = useState(opened ? true : false);
@@ -81,6 +83,7 @@ const Dropdown = ({
         style={{
           maxHeight: dropOpen ? "100%" : "0px",
           opacity: dropOpen ? "1" : "0",
+          overflowY: dropOpen ? overflowY : "hidden",
         }}
       >
         <div
