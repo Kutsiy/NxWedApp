@@ -7,6 +7,7 @@ import Footer from "@/components/footer/footer";
 import { useHeaderStore } from "@/stores/header/header-store-provider";
 import Menu from "../menu/menu";
 import styles from "./wrapper.module.scss";
+import { AboutStoreProvider } from "../../stores/about/about-store-provider";
 
 function Wrapper({ children }: { children: ReactNode }) {
   const menuIsOpen = useHeaderStore((state) => state.isOpen);
@@ -15,7 +16,9 @@ function Wrapper({ children }: { children: ReactNode }) {
     <Main>
       <Header />
       <main className={styles.content}>
-        {menuIsOpen ? <Menu></Menu> : children}
+        <AboutStoreProvider>
+          {menuIsOpen ? <Menu></Menu> : children}
+        </AboutStoreProvider>
       </main>
       <Footer />
     </Main>
