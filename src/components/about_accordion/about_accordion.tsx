@@ -3,9 +3,9 @@
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import DropItem from "../dropitem/dropitem";
-import { IoLogoMarkdown } from "react-icons/io";
 import { FaFolder } from "react-icons/fa6";
 import Dropdown from "../dropdown/dropdown";
+import { FaSchool } from "react-icons/fa";
 
 const AboutAccordion = ({}) => {
   const pathName = usePathname();
@@ -14,39 +14,12 @@ const AboutAccordion = ({}) => {
       return (
         <>
           <Dropdown title="professional-info" fontSize="1.15rem" opened>
-            <Dropdown
-              title={
-                <DropItem icon={<FaFolder />} color="#FF637E">
-                  bio
-                </DropItem>
-              }
-              type="light"
-            >
-              <DropItem icon={<IoLogoMarkdown />}>Bfdfdfdfd</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>fffddffdfdd</DropItem>
-            </Dropdown>
-            <Dropdown
-              title={
-                <DropItem icon={<FaFolder />} color="#00D5BE">
-                  interests
-                </DropItem>
-              }
-              type="light"
-            >
-              <DropItem icon={<IoLogoMarkdown />}>Bfdfdfdfd</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>fffddffdfdd</DropItem>
-            </Dropdown>
-            <Dropdown
-              title={
-                <DropItem icon={<FaFolder />} color="#615FFF">
-                  education
-                </DropItem>
-              }
-              type="light"
-            >
-              <DropItem icon={<IoLogoMarkdown />}>high-school</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>university</DropItem>
-            </Dropdown>
+            <DropItem icon={<FaFolder />} color="#FF637E">
+              skills
+            </DropItem>
+            <DropItem icon={<FaFolder />} color="#615FFF">
+              resume
+            </DropItem>
           </Dropdown>
         </>
       );
@@ -54,28 +27,9 @@ const AboutAccordion = ({}) => {
       return (
         <>
           <Dropdown title="personal-info" opened>
-            <Dropdown
-              title={
-                <DropItem icon={<FaFolder />} color="#FF637E">
-                  bio
-                </DropItem>
-              }
-              type="light"
-            >
-              <DropItem icon={<IoLogoMarkdown />}>Bfdfdfdfd</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>fffddffdfdd</DropItem>
-            </Dropdown>
-            <Dropdown
-              title={
-                <DropItem icon={<FaFolder />} color="#00D5B3">
-                  skedob
-                </DropItem>
-              }
-              type="light"
-            >
-              <DropItem icon={<IoLogoMarkdown />}>Bfdfdfdfd</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>fffddffdfdd</DropItem>
-            </Dropdown>
+            <DropItem icon={<FaFolder />} color="#FF637E">
+              bio
+            </DropItem>
             <Dropdown
               title={
                 <DropItem icon={<FaFolder />} color="#615FFF">
@@ -84,26 +38,7 @@ const AboutAccordion = ({}) => {
               }
               type="light"
             >
-              <DropItem icon={<IoLogoMarkdown />}>high-school</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>university</DropItem>
-            </Dropdown>
-          </Dropdown>
-        </>
-      );
-    } else if (pathName === "/about/hobbies") {
-      return (
-        <>
-          <Dropdown title="hobbies" opened>
-            <Dropdown
-              title={
-                <DropItem icon={<FaFolder />} color="#FF637E">
-                  bio
-                </DropItem>
-              }
-              type="light"
-            >
-              <DropItem icon={<IoLogoMarkdown />}>Bfdfdfdfd</DropItem>
-              <DropItem icon={<IoLogoMarkdown />}>fffddffdfdd</DropItem>
+              <DropItem icon={<FaSchool />}>College</DropItem>
             </Dropdown>
           </Dropdown>
         </>
