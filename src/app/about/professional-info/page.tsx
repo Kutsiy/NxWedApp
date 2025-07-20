@@ -4,7 +4,7 @@ import styles from "./../page.module.scss";
 const Page: NextPage = ({}) => {
   return (
     <div className={styles.wrapper}>
-      There is nothing here yet, please choose something
+      Here is nothing here yet, please choose something
     </div>
   );
 };

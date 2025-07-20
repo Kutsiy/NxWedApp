@@ -84,6 +84,7 @@ const Dropdown = ({
           maxHeight: dropOpen ? "100%" : "0px",
           opacity: dropOpen ? "1" : "0",
           overflowY: dropOpen ? overflowY : "hidden",
+          marginBlock: dropOpen ? "8px" : "0",
         }}
       >
         <div

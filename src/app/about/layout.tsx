@@ -49,15 +49,6 @@ const AboutPage: NextPage<Props> = ({ children }: Props) => {
               <FaRegCircle />
             </Link>
           </div>
-          <div
-            className={styles.about__page}
-            style={{
-              color:
-                pathName === "/about/hobbies"
-                  ? "rgba(202, 213, 226, 1)"
-                  : "rgba(98, 116, 142, 1)",
-            }}
-          ></div>
         </div>
         <div className={styles.about__accordion}>
           <AboutAccordion />
