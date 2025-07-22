@@ -26,10 +26,9 @@ const AboutPage: NextPage<Props> = ({ children }: Props) => {
           <div
             className={styles.about__page}
             style={{
-              color:
-                pathName === "/about/professional-info"
-                  ? "rgba(202, 213, 226, 1)"
-                  : "rgba(98, 116, 142, 1)",
+              color: pathName.startsWith("/about/professional-info")
+                ? "rgba(202, 213, 226, 1)"
+                : "rgba(98, 116, 142, 1)",
             }}
           >
             <Link href="/about/professional-info">
@@ -39,10 +38,9 @@ const AboutPage: NextPage<Props> = ({ children }: Props) => {
           <div
             className={styles.about__page}
             style={{
-              color:
-                pathName === "/about/personal-info"
-                  ? "rgba(202, 213, 226, 1)"
-                  : "rgba(98, 116, 142, 1)",
+              color: pathName.startsWith("/about/personal-info")
+                ? "rgba(202, 213, 226, 1)"
+                : "rgba(98, 116, 142, 1)",
             }}
           >
             <Link href="/about/personal-info">
