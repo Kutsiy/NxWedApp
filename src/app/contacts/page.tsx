@@ -6,9 +6,8 @@ import DropItem from "@/components/dropitem/dropitem";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FiExternalLink } from "react-icons/fi";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { useState } from "react";
+import Area from "@/components/area/area";
 
 const ContactsPage: NextPage = ({}) => {
   const todayFormatted = new Intl.DateTimeFormat("en-GB", {
@@ -122,30 +121,7 @@ button.addEventListener('click', () => {
             </form>
           </div>
           <div className={styles.contacts__code_snippet}>
-            <SyntaxHighlighter
-              language="javascript"
-              style={atomOneDark}
-              showLineNumbers
-              lineNumberStyle={{
-                paddingRight: "20px",
-                paddingBottom: 5,
-                color: "rgba(145, 161, 185, 1)",
-                whiteSpace: "pre-wrap",
-              }}
-              customStyle={{
-                backgroundColor: "rgba(1, 0, 0, 0)",
-                color: "rgba(96, 95, 255, 1)",
-                minWidth: "400px",
-                maxWidth: "600px",
-                overflowX: "hidden",
-                whiteSpace: "pre-wrap",
-                wordBreak: "break-word",
-              }}
-              wrapLongLines={true}
-              wrapLines={true}
-            >
-              {codeString}
-            </SyntaxHighlighter>
+            <Area>{codeString}</Area>
           </div>
         </div>
       </div>
