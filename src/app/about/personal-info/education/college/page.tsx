@@ -3,7 +3,7 @@ import { NextPage } from "next";
 
 const Page: NextPage = ({}) => {
   const text = `/**
- * About me
+ * Education me
  * I have 5 years of еxperience in web
  * development lorem ipsum dolor sit amet, 
  * consectetur adipiscing elit, sed do eiusmod

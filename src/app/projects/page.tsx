@@ -82,55 +82,6 @@ const ProjectsPage: NextPage = ({}) => {
           >
             Angular
           </DropCheck>
-
-          <DropCheck
-            icon={<FaAngular />}
-            checkValue={checkAngular}
-            changeFunc={checkAngularFunc}
-            onClick={() => addOrRemoveToArray("Angular")}
-          >
-            Angular
-          </DropCheck>
-          <DropCheck
-            icon={<FaAngular />}
-            checkValue={checkAngular}
-            changeFunc={checkAngularFunc}
-            onClick={() => addOrRemoveToArray("Angular")}
-          >
-            Angular
-          </DropCheck>
-          <DropCheck
-            icon={<FaAngular />}
-            checkValue={checkAngular}
-            changeFunc={checkAngularFunc}
-            onClick={() => addOrRemoveToArray("Angular")}
-          >
-            Angular
-          </DropCheck>
-          <DropCheck
-            icon={<FaAngular />}
-            checkValue={checkAngular}
-            changeFunc={checkAngularFunc}
-            onClick={() => addOrRemoveToArray("Angular")}
-          >
-            Angular
-          </DropCheck>
-          <DropCheck
-            icon={<FaAngular />}
-            checkValue={checkAngular}
-            changeFunc={checkAngularFunc}
-            onClick={() => addOrRemoveToArray("Angular")}
-          >
-            Angular
-          </DropCheck>
-          <DropCheck
-            icon={<FaAngular />}
-            checkValue={checkAngular}
-            changeFunc={checkAngularFunc}
-            onClick={() => addOrRemoveToArray("Angular")}
-          >
-            Angular
-          </DropCheck>
         </Dropdown>
       </div>
       <div

@@ -2,47 +2,36 @@ import { devtools } from "zustand/middleware";
 import { createStore } from "zustand/vanilla";
 
 export type AboutState = {
-  professionalInfo: string[];
-  personalInfo: string[];
+  aboutNav: { name: string; href: string }[];
 };
 
 export type AboutActions = {
-  addToProfessional: (value: string) => void;
-  addToPersonal: (value: string) => void;
-  deleteFromProfessional: (value: string) => void;
-  deleteFromPersonal: (value: string) => void;
-  cleanProfessional: () => void;
-  cleanPersonal: () => void;
+  addToAboutNav: (value: string, href: string) => void;
+  deleteFromAboutNav: (value: string) => void;
+  cleanAboutNav: () => void;
 };
 
 export type AboutStore = AboutState & AboutActions;
 
 export const defaultAboutStore: AboutState = {
-  professionalInfo: [],
-  personalInfo: [],
+  aboutNav: [],
 };
 
 export const createAboutStore = (initState: AboutState = defaultAboutStore) =>
   createStore<AboutStore>()(
     devtools((set) => ({
       ...initState,
-      addToProfessional: (value) =>
+      addToAboutNav: (name: string, href: string): void =>
+        set((state: AboutStore) => {
+          state.aboutNav = [
+            ...state.aboutNav.filter((val) => val.name !== name),
+          ];
+          return { aboutNav: [...state.aboutNav, { name, href }] };
+        }),
+      deleteFromAboutNav: (name) =>
         set((state) => ({
-          professionalInfo: [...state.professionalInfo, value],
+          aboutNav: [...state.aboutNav.filter((val) => val.name !== name)],
         })),
-      addToPersonal: (value) =>
-        set((state) => ({ personalInfo: [...state.personalInfo, value] })),
-      deleteFromProfessional: (value) =>
-        set((state) => ({
-          professionalInfo: [
-            ...state.professionalInfo.filter((val) => val !== value),
-          ],
-        })),
-      deleteFromPersonal: (value) =>
-        set((state) => ({
-          personalInfo: [...state.personalInfo.filter((val) => val !== value)],
-        })),
-      cleanProfessional: () => set(() => ({ professionalInfo: [] })),
-      cleanPersonal: () => set(() => ({ personalInfo: [] })),
+      cleanAboutNav: () => set(() => ({ aboutNav: [] })),
     }))
   );

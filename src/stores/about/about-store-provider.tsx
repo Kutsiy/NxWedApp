@@ -29,9 +29,9 @@ export const AboutStoreProvider = ({ children }: AboutStoreProviderProps) => {
 };
 
 export const useAboutStore = <T,>(selector: (store: AboutStore) => T) => {
-  const headerStoreContext = useContext(AboutStoreContext);
-  if (!headerStoreContext) {
+  const aboutStoreContext = useContext(AboutStoreContext);
+  if (!aboutStoreContext) {
     throw new Error(`useHeaderStore must be used within StoreProvider`);
   }
-  return useStore(headerStoreContext, selector);
+  return useStore(aboutStoreContext, selector);
 };

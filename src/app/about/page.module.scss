@@ -35,7 +35,26 @@
     &_top {
       width: 100%;
       min-height: 40px;
+      max-height: 40px;
       border-bottom: var(--glass-border);
+      display: flex;
+
+      &_tab {
+        height: 100%;
+        width: 170px;
+        border-right: var(--glass-border);
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 24px;
+
+        & > span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 22px;
+          cursor: pointer;
+        }
+      }
     }
 
     &_block {
